@@ -10,7 +10,7 @@
 /// ```
 /// use std::collections::BinaryHeap;
 ///
-/// use macroland::collections::binary_heap;
+/// use macroland::binary_heap;
 ///
 /// let mut uninit_binary_heap = binary_heap!(usize);
 /// uninit_binary_heap.push(100);
@@ -42,7 +42,7 @@ macro_rules! binary_heap {
 /// # Examples
 ///
 /// ```
-/// use macroland::collections::btreeset;
+/// use macroland::btreeset;
 ///
 /// let mut uninit_btreeset = btreeset!(&str);
 /// uninit_btreeset.insert("Hello!");
@@ -74,7 +74,7 @@ macro_rules! btreeset {
 /// # Examples
 ///
 /// ```
-/// use macroland::collections::btreemap;
+/// use macroland::btreemap;
 ///
 /// let mut uninit_btreemap = btreemap!(&str, usize);
 /// uninit_btreemap.insert("Uno", 1);
@@ -112,7 +112,7 @@ macro_rules! btreemap {
 /// # Examples
 ///
 /// ```
-/// use macroland::collections::hashset;
+/// use macroland::hashset;
 ///
 /// let mut uninit_hashset = hashset!(&str);
 /// uninit_hashset.insert("Hello!");
@@ -143,7 +143,7 @@ macro_rules! hashset {
 /// # Examples
 ///
 /// ```
-/// use macroland::collections::hashmap;
+/// use macroland::hashmap;
 ///
 /// let mut uninit_hashmap = hashmap!(&str, usize);
 /// uninit_hashmap.insert("Uno", 1);
@@ -173,4 +173,23 @@ macro_rules! hashmap {
             new_map
         }
     };
+}
+
+/// `boxed!` provides a simple way to box a given type.
+///
+/// # Example
+///
+/// ```
+/// use macroland::boxed;
+///
+/// let macroland_box = boxed!(Some(100));
+/// let normal_box = Box::new(Some(100));
+///
+/// assert_eq!(macroland_box, normal_box);
+/// ```
+#[macro_export]
+macro_rules! boxed {
+    ($value:expr) => {{
+        Box::new($value)
+    }};
 }

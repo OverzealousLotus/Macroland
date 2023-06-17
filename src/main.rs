@@ -1,25 +1,6 @@
 use std::collections::{BTreeMap, BTreeSet, BinaryHeap, HashMap, HashSet};
 
-mod collections;
-
-/// `boxed!` provides a simple way to box a given type.
-///
-/// # Example
-///
-/// ```
-/// use macroland::boxed;
-///
-/// let macroland_box = boxed!(Some(100));
-/// let normal_box = Box::new(Some(100));
-///
-/// assert_eq!(macroland_box, normal_box);
-/// ```
-#[macro_export]
-macro_rules! boxed {
-    ($value:expr) => {{
-        Box::new($value)
-    }};
-}
+use macroland::*;
 
 fn main() {
     let hashmap_mac = hashmap!("uwu" => 100);

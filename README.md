@@ -15,7 +15,7 @@ For example: `hashmap!`, or `binary_heap!`
 #### Examples
 ```
 // I've tried my best to put things where they belong.
-use macroland::collections::hashmap;
+use macroland::hashmap;
 
 let my_hashmap = hashmap!(
     "Key 1" => "Value 1",
@@ -33,7 +33,7 @@ my_hashmap.insert("Hello!", 100);
 #### Examples
 ```
 // I didn't even know HashSets were that different from HashMaps!
-use macroland::collections::hashset;
+use macroland::hashset;
 
 let my_hashset = hashset!(
     1,
@@ -53,7 +53,7 @@ my_hashset.insert(500);
 #### Examples
 ```
 // I've used this before, but I am not entirely sure about the difference with it and HashMaps!
-use macroland::collections::btreemap;
+use macroland::btreemap;
 
 let my_btreemap = btreemap!(
     "Greetings!" => true,
@@ -71,7 +71,7 @@ my_btreemap.insert("Hewwo!", false);
 #### Examples
 ```
 // Here comes the set variant of btree!
-use macroland::collections::btreeset;
+use macroland::btreeset;
 
 let my_btreeset = btreeset!(
     "Greetings!",
@@ -89,7 +89,7 @@ my_btreeset.insert("Weee!");
 #### Examples
 ```
 // Someday, I might use this one too!
-use macroland::collections::binary_heap;
+use macroland::binary_heap;
 
 let my_binary_heap = binary_heap!(
     5,
