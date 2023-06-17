@@ -8,12 +8,14 @@
 /// # Examples
 ///
 /// ```
+/// use std::collections::BinaryHeap;
+///
 /// use macroland::collections::binary_heap;
 ///
-/// let mut uninit_binary_heap = binary_heap!(usize)
+/// let mut uninit_binary_heap = binary_heap!(usize);
 /// uninit_binary_heap.push(100);
 /// // Or
-/// let my_binary_heap: BinaryHeap<usize> = binary_heap!(100)
+/// let my_binary_heap: BinaryHeap<usize> = binary_heap!(100);
 ///
 /// assert_eq!(uninit_binary_heap, my_binary_heap);
 /// ```
@@ -74,12 +76,12 @@ macro_rules! btreeset {
 /// ```
 /// use macroland::collections::btreemap;
 ///
-/// let mut uninit_btreeset = btreemap!(&str, usize);
-/// uninit_btreeset.insert("Uno" => 1);
-/// uninit_btreeset.insert("Dos" => 2);
-/// uninit_btreeset.insert("Tres" => 3);
+/// let mut uninit_btreemap = btreemap!(&str, usize);
+/// uninit_btreemap.insert("Uno", 1);
+/// uninit_btreemap.insert("Dos", 2);
+/// uninit_btreemap.insert("Tres", 3);
 /// // Or
-/// let my_btreeset = btreemap!(
+/// let my_btreemap = btreemap!(
 ///     "Uno" => 1,
 ///     "Dos" => 2,
 ///     "Tres" => 3
@@ -144,9 +146,9 @@ macro_rules! hashset {
 /// use macroland::collections::hashmap;
 ///
 /// let mut uninit_hashmap = hashmap!(&str, usize);
-/// uninit_hashmap.insert("Uno" => 1);
-/// uninit_hashmap.insert("Dos" => 2);
-/// uninit_hashmap.insert("Tres" => 3);
+/// uninit_hashmap.insert("Uno", 1);
+/// uninit_hashmap.insert("Dos", 2);
+/// uninit_hashmap.insert("Tres", 3);
 /// // Or
 /// let my_hashmap = hashmap!(
 ///     "Uno" => 1,

@@ -4,6 +4,9 @@ version = "0.1.0"
 authors = ["OverzealousLotus"]
 description = "Simple crate for macro shorthands of various types in Rust."
 license = "GPL-3.0-or-later"
+homepage = "https://github.com/OverzealousLotus/Macroland"
+repository = "https://github.com/OverzealousLotus/Macroland"
+readme = "README.md"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
