@@ -3,7 +3,7 @@ name = "macroland"
 version = "0.1.0"
 authors = ["OverzealousLotus"]
 description = "Simple crate for macro shorthands of various types in Rust."
-license = "GPLv3.0"
+license = "GPL-3.0-or-later"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
