@@ -1,6 +1,6 @@
 [package]
 name = "macroland"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["OverzealousLotus"]
 description = "Simple crate for macro shorthands of various types in Rust."
 license = "GPL-3.0-or-later"
