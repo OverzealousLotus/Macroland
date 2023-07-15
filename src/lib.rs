@@ -143,6 +143,28 @@ macro_rules! boxed {
     }};
 }
 
+/// `cell!` Tired of calling `new` all the time? Here you go!
+///
+/// # Example
+///
+/// ```
+/// use macroland::cell;
+///
+/// let macroland_cell = cell!("Hi friends!");
+/// let normal_cell = std::cell::Cell::new("Uwu");
+///
+/// assert_eq!(macroland_cell, normal_cell);
+/// ```
+#[macro_export]
+macro_rules! cell {
+    ($value:expr) => {{
+        {
+            use std::cell::Cell;
+            Cell::new($value)
+        }
+    }};
+}
+
 /// `hashset!` creates a HashSet. You can either define its members during the macro call,
 /// or create an empty HashSet with its type predefined.
 ///
@@ -262,6 +284,71 @@ macro_rules! linkedlist {
             new_linkedlist
         }
     };
+}
+
+/// `oncecell!` Yup, here's a OnceCell<T> for you.
+///
+/// # Example
+///
+/// ```
+/// use macroland::oncecell;
+///
+/// // Create an empty OnceCell with a specified type!
+/// let empty_oncecell = oncecell!(String);
+/// empty_oncecell.set(String::from("You are not my friends anymore! :C"));
+/// ```
+#[macro_export]
+macro_rules! oncecell {
+    ($value_type:ty) => {{
+        use std::cell::OnceCell;
+
+        let new_oncecell: OnceCell<$value_type> = OnceCell::new();
+        new_oncecell
+    }};
+}
+
+/// `refcell!` `new` is so old school!
+///
+/// # Example
+///
+/// ```
+/// use macroland::refcell;
+///
+/// let macroland_refcell = refcell!("Hi friends!");
+/// let normal_refcell = std::cell::RefCell::new("Uwu");
+///
+/// assert_eq!(macroland_refcell, normal_refcell);
+/// ```
+#[macro_export]
+macro_rules! refcell {
+    ($value:expr) => {{
+        {
+            use std::cell::RefCell;
+            RefCell::new($value)
+        }
+    }};
+}
+
+/// `rc!` Reference Counting time!
+///
+/// # Example
+///
+/// ```
+/// use macroland::rc;
+///
+/// let macroland_rc = rc!("Hi friends!");
+/// let normal_rc = std::rc:Rc::new("Uwu");
+///
+/// assert_eq!(macroland_rc, normal_rc);
+/// ```
+#[macro_export]
+macro_rules! rc {
+    ($value:expr) => {{
+        {
+            use std::rc::Rc;
+            Rc::new($value)
+        }
+    }};
 }
 
 /// `vecdeque!` creates a VecDeque. Be warned, members are pushed into the *front* of the
