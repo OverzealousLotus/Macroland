@@ -85,20 +85,15 @@ let mut my_btreeset = btreeset!(&str);
 my_btreeset.insert("Weee!");
 ```
 
-### `binary_heap!`
-
-#### Examples
+### `cell!`
 ```
-// Someday, I might use this one too!
-use macroland::binary_heap;
+// Welcome to the wonderful world of celling!
+use macroland::cell;
 
-let my_binary_heap = binary_heap!(
-    5,
-    10,
-    15,
-);
+let my_cell = cell!(10);
 
-// You know the drill!
-let mut my_binary_heap = binary_heap!(isize);
-my_binary_heap.push(100);
+// Everything works!
+my_cell.set(20)
+
+println!("{}", my_cell.get());
 ```
