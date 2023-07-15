@@ -10,8 +10,6 @@
 /// # Examples
 ///
 /// ```
-/// use std::collections::BinaryHeap;
-///
 /// use macroland::binary_heap;
 ///
 /// let mut uninit_binary_heap = binary_heap!(usize);
@@ -50,8 +48,6 @@ macro_rules! binary_heap {
 /// # Examples
 ///
 /// ```
-/// use std::collections::BTreeSet;
-///
 /// use macroland::btreeset;
 ///
 /// let mut uninit_btreeset = btreeset!(&str);
@@ -89,8 +85,6 @@ macro_rules! btreeset {
 /// # Examples
 ///
 /// ```
-/// use std::collections::BTreeMap
-///
 /// use macroland::btreemap;
 ///
 /// let mut uninit_btreemap = btreemap!(&str, usize);
@@ -155,8 +149,6 @@ macro_rules! boxed {
 /// # Examples
 ///
 /// ```
-/// use std::collections::HashSet;
-///
 /// use macroland::hashset;
 ///
 /// let mut uninit_hashset = hashset!(&str);
@@ -195,8 +187,6 @@ macro_rules! hashset {
 /// # Examples
 ///
 /// ```
-/// use std::collections::Hashmap;
-///
 /// use macroland::hashmap;
 ///
 /// let mut uninit_hashmap = hashmap!(&str, usize);
@@ -240,8 +230,6 @@ macro_rules! hashmap {
 /// # Examples
 ///
 /// ```
-/// use std::collections::LinkedList;
-///
 /// use macroland::linkedlist;
 ///
 /// let mut uninit_linkedlist = linkedlist!(isize);
@@ -282,8 +270,6 @@ macro_rules! linkedlist {
 /// # Examples
 ///
 /// ```
-/// use std::collections::VecDeque;
-///
 /// use macroland::vecdeque;
 ///
 /// let mut uninit_vecdeque = vecdeque!(&str);
