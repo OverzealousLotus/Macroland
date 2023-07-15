@@ -8,6 +8,7 @@ feel free to report them to my github.
 For example: `hashmap!`, or `binary_heap!`
 
 ## Documentation
+- See [Macroland on docs.rs](https://docs.rs/macroland/latest/macroland/)
 
 -----
 ### `hashmap!`
